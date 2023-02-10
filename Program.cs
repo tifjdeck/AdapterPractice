@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+// The main program that uses the ToyBear and Bear interfaces and prints details for a Grizzly, a TeddyBear, and a BearAdapter.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +13,17 @@ namespace AdapterPractice
     {
         static void Main(string[] args)
         {
-            Grizzly.Bear();
-            IToyBear.TeddyBear();
-            IToyBear BearAdapter(Grizzly);
+            IBear bear = new Grizzly();
+            IToyBear toyBear = new TeddyBear();
+            IToyBear realToyBear = new BearAdapter(bear);
 
-            Console.WriteLine(Grizzly.maul());
-            Console.WriteLine(Grizzly.hibernate());
-            Console.WriteLine(TeddyBear.hug());
+            bear.hibernate();
+            bear.maul();
+
+            toyBear.hug();
+
+            realToyBear.hug();
+
             Console.ReadKey();
         }
     }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+// The interface for the Bear classes. Allows Bears to call the maul and hibernate.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace AdapterPractice
 {
-    interface IBear
+    public interface IBear
     {
-        public void maul();
-        public void hibernate();
+        void maul();
+        void hibernate();
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+// The Grizzly class using the IBear interface. It can maul and hibernate.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPractice
 {
-    class Grizzly : IBear
+    public class Grizzly : IBear
     {
         public void maul()
         {

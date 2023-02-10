@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+// The TeddyBear class using the IToyBear interface. It can hug.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPractice
 {
-    class TeddyBear : IToyBear
+    public class TeddyBear : IToyBear
     {
         public void hug()
         {
